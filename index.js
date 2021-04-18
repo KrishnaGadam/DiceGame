@@ -1,0 +1,13 @@
+var k = Math.random();
+var k1 = Math.random();
+k = k * 6 + 1;
+k1 = k1 * 6 + 1;
+k1 = Math.floor(k1);
+k = Math.floor(k);
+var m = "images/dice" + k + ".png";
+document.querySelectorAll("img")[0].setAttribute("src", m);
+var m1 = "images/dice" + k1 + ".png";
+document.querySelectorAll("img")[1].setAttribute("src", m1);
+if (k > k1) document.querySelector("h1").innerHTML = "Player 1 Wins!";
+else if (k === k1) document.querySelector("h1").innerHTML = "Draw!";
+else document.querySelector("h1").innerHTML = "Player 2 Wins!";
